@@ -1,0 +1,121 @@
+var corAndar1 = 0
+var corAndar2 = 0
+var corAndar3 = 0
+var corLamina1Andar1 = 0
+var corLamina1Andar2 = 0
+var corLamina1Andar3 = 0
+var corLamina2Andar1 = 0
+var corLamina2Andar2 = 0
+var corLamina2Andar3 = 0
+var corLamina3Andar1 = 0
+var corLamina3Andar2 = 0
+var corLamina3Andar3 = 0
+var posicaoEstoqueAndar1 = 0
+var posicaoEstoqueAndar2 = 0
+var posicaoEstoqueAndar3 = 0
+var posicaoExpedicao = 0
+var padraoLamina1Andar1 = 0
+var padraoLamina1Andar2 = 0
+var padraoLamina1Andar3 = 0
+var padraoLamina2Andar1 = 0
+var padraoLamina2Andar2 = 0
+var padraoLamina2Andar3 = 0
+var padraoLamina3Andar1 = 0
+var padraoLamina3Andar2 = 0
+var padraoLamina3Andar3 = 0
+var andares = 0
+
+//global.set("trackingCode_start", msg.payload["trackingCode"])
+
+if (msg.payload["productCode"] == "BLOCO1") {
+    posicaoEstoqueAndar1 = msg.payload["parameters"][0]["value"]
+    corAndar1 = msg.payload["parameters"][1]["value"]
+    corLamina1Andar1 = msg.payload["parameters"][2]["value"]
+    corLamina2Andar1 = msg.payload["parameters"][3]["value"]
+    corLamina3Andar1 = msg.payload["parameters"][4]["value"]
+    padraoLamina1Andar1 = msg.payload["parameters"][5]["value"]
+    padraoLamina2Andar1 = msg.payload["parameters"][6]["value"]
+    padraoLamina3Andar1 = msg.payload["parameters"][7]["value"]
+    andares = msg.payload["parameters"][8]["value"]
+    posicaoExpedicao = msg.payload["parameters"][9]["value"]
+}
+if (msg.payload["productCode"] == "BLOCO2") {
+    posicaoEstoqueAndar1 = msg.payload["parameters"][0]["value"]
+    posicaoEstoqueAndar2 = msg.payload["parameters"][1]["value"]
+    corAndar1 = msg.payload["parameters"][2]["value"]
+    corAndar2 = msg.payload["parameters"][3]["value"]
+    corLamina1Andar1 = msg.payload["parameters"][4]["value"]
+    corLamina2Andar1 = msg.payload["parameters"][5]["value"]
+    corLamina3Andar1 = msg.payload["parameters"][6]["value"]
+    corLamina1Andar2 = msg.payload["parameters"][7]["value"]
+    corLamina2Andar2 = msg.payload["parameters"][8]["value"]
+    corLamina3Andar2 = msg.payload["parameters"][9]["value"]
+    padraoLamina1Andar1 = msg.payload["parameters"][10]["value"]
+    padraoLamina2Andar1 = msg.payload["parameters"][11]["value"]
+    padraoLamina3Andar1 = msg.payload["parameters"][12]["value"]
+    padraoLamina1Andar2 = msg.payload["parameters"][13]["value"]
+    padraoLamina2Andar2 = msg.payload["parameters"][14]["value"]
+    padraoLamina3Andar2 = msg.payload["parameters"][15]["value"]
+    andares = msg.payload["parameters"][16]["value"]
+    posicaoExpedicao = msg.payload["parameters"][17]["value"]
+}
+if (msg.payload["productCode"] == "BLOCO3") {
+    posicaoEstoqueAndar1 = msg.payload["parameters"][0]["value"]
+    posicaoEstoqueAndar2 = msg.payload["parameters"][1]["value"]
+    posicaoEstoqueAndar3 = msg.payload["parameters"][2]["value"]
+    corAndar1 = msg.payload["parameters"][3]["value"]
+    corAndar2 = msg.payload["parameters"][4]["value"]
+    corAndar3 = msg.payload["parameters"][5]["value"]
+    corLamina1Andar1 = msg.payload["parameters"][6]["value"]
+    corLamina2Andar1 = msg.payload["parameters"][7]["value"]
+    corLamina3Andar1 = msg.payload["parameters"][8]["value"]
+    corLamina1Andar2 = msg.payload["parameters"][9]["value"]
+    corLamina2Andar2 = msg.payload["parameters"][10]["value"]
+    corLamina3Andar2 = msg.payload["parameters"][11]["value"]
+    corLamina1Andar3 = msg.payload["parameters"][12]["value"]
+    corLamina2Andar3 = msg.payload["parameters"][13]["value"]
+    corLamina3Andar3 = msg.payload["parameters"][14]["value"]
+    padraoLamina1Andar1 = msg.payload["parameters"][15]["value"]
+    padraoLamina2Andar1 = msg.payload["parameters"][16]["value"]
+    padraoLamina3Andar1 = msg.payload["parameters"][17]["value"]
+    padraoLamina1Andar2 = msg.payload["parameters"][18]["value"]
+    padraoLamina2Andar2 = msg.payload["parameters"][19]["value"]
+    padraoLamina3Andar2 = msg.payload["parameters"][20]["value"]
+    padraoLamina1Andar3 = msg.payload["parameters"][21]["value"]
+    padraoLamina2Andar3 = msg.payload["parameters"][22]["value"]
+    padraoLamina3Andar3 = msg.payload["parameters"][23]["value"]
+    andares = msg.payload["parameters"][24]["value"]
+    posicaoExpedicao = msg.payload["parameters"][25]["value"]
+}
+
+msg.payload = {
+    "andares"               : andares,
+    "corAndar1"             : corAndar1,
+    "corAndar2"             : corAndar2,
+    "corAndar3"             : corAndar3,
+    "corLamina1Andar1"      : corLamina1Andar1,
+    "corLamina1Andar2"      : corLamina1Andar2,
+    "corLamina1Andar3"      : corLamina1Andar3,
+    "corLamina2Andar1"      : corLamina2Andar1,
+    "corLamina2Andar2"      : corLamina2Andar2,
+    "corLamina2Andar3"      : corLamina2Andar3,
+    "corLamina3Andar1"      : corLamina3Andar1,
+    "corLamina3Andar2"      : corLamina3Andar2,
+    "corLamina3Andar3"      : corLamina3Andar3,
+    "numeroPedido"          : parseInt((msg.payload["code"]).substr(2)),
+    "padraoLamina1Andar1"   : padraoLamina1Andar1,
+    "padraoLamina1Andar2"   : padraoLamina1Andar2,
+    "padraoLamina1Andar3"   : padraoLamina1Andar3,
+    "padraoLamina2Andar1"   : padraoLamina2Andar1,
+    "padraoLamina2Andar2"   : padraoLamina2Andar2,
+    "padraoLamina2Andar3"   : padraoLamina2Andar3,
+    "padraoLamina3Andar1"   : padraoLamina3Andar1,
+    "padraoLamina3Andar2"   : padraoLamina3Andar2,
+    "padraoLamina3Andar3"   : padraoLamina3Andar3,
+    "posicaoEstoqueAndar1"  : posicaoEstoqueAndar1,
+    "posicaoEstoqueAndar2"  : posicaoEstoqueAndar2,
+    "posicaoEstoqueAndar3"  : posicaoEstoqueAndar3,
+    "posicaoExpedicao"      : posicaoExpedicao,
+}
+
+return msg
