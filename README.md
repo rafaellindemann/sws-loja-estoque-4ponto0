@@ -1,0 +1,1 @@
+# sws-loja-estoque-4ponto0
