@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/smart_ico.ico" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <title>Smart 4.0 - Status</title>
+</head>
+<!-- onload="startRefresh()" -->
+
+<body onload="statusPedido(); startRefresh()">
+    <div class="header">
+
+        <div class="company">
+            <img src="images/Exxer_2_roxa.png" alt="Company">
+        </div>
+        <div class="brand">
+            <img src="images/smart_ico.png" alt="Logo">
+            <h5>SMART 4.0</h5>
+        </div>
+        <div class="language">
+            <img class="flags" src="images/flags/br.png" alt="br-flag" onclick="changeLanguage('br')">
+            <img class="flags" src="images/flags/es.png" alt="es-flag" onclick="changeLanguage('es')">
+            <img class="flags" src="images/flags/uk.png" alt="uk-flag" onclick="changeLanguage('uk')">
+        </div>
+
+    </div>
+
+<div class="animation">
+    <div class="content">
+
+        <h3 id="lang_status">Status do Pedido</h3>
+
+        <div class="conteinerVerticaisStatus">
+            <div style="vertical-align: middle;">
+                <div id="divBarGraphEstoque" class="containerVertical">
+                    <img class="imagemStatus" style="width: 80%; height: auto;margin: 10%;"
+                        src="images/status/estoque.png" alt="Estoque">
+                    <div class="nomeStatus" id="lang_estoque">ESTOQUE</div>
+                </div>
+                <div id="divBarGraphProcesso" class="containerVertical">
+                    <img class="imagemStatus" style="width: 80%;height: auto;margin: 10%;"
+                        src="images/status/laminas.png" alt="Laminas">
+                    <div class="nomeStatus" id="lang_processo">PROCESSO
+                    </div>
+                </div>
+                <div id="divBarGraphMontagem" class="containerVertical">
+                    <img class="imagemStatus" style="width: 80%;height: auto;margin: 10%;"
+                        src="images/status/montagem.png" alt="Montagem">
+                    <div class="nomeStatus" id="lang_montagem">MONTAGEM</div>
+                </div>
+                <div id="divBarGraphExpedicao" class="containerVertical">
+                    <img class="imagemStatus" style="width: 80%;height: auto;margin: 10%;"
+                        src="images/status/expedicao.png" alt="Expedicao">
+                    <div class="nomeStatus" id="lang_expedicao">EXPEDIÇÃO</div>
+                </div>
+            </div>
+            <div id="divBarGraphEsteira">
+                <div id="nomeStatusEsteira">ESTEIRA</div>
+            </div>
+        </div>
+
+        <div class="tempoProducao">
+            <div class="tempoDescricao">
+                <span id="lang_tempoProducao">Tempo de Produção</span>
+            </div>
+            <span id="tempoProducaoHoras">00</span>
+            <span>:</span>
+            <span id="tempoProducaoMinutos">00</span>
+            <span>:</span>
+            <span id="tempoProducaoSegundos">00</span>
+        </div>
+
+        <div class="containerHorizontal">
+            <div id="divBarGraphTotal" class="barraProgresso">Pendente</div>
+        </div>
+
+        <div id="containerTime">
+            <span id="startTime"></span>
+            <span id="plannedFinishTime"></span>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div id="divOp">
+            <h3 id="textOp"></h3>
+        </div>
+        <div id="divConfirmaRemocao" style="display: none;">
+            <h3 id="lang_pronta">Peça pronta! Solicite remoção da peça.</h3>
+            <br>
+            <input type="value" id="num-posicao" class="button" disabled="disabled">
+            <br>
+
+            <input class="button" type="submit" id="retira-estoque" value="OK" onclick="openWindow(10)">
+        </div>
+        <div id="divVoltaInicio" style="display: none;">
+            <input class="button" type="submit" id="lang_voltar" value="Voltar ao início" onclick="openWindow(10)">
+        </div>
+        <div id="divCancelPedido" style="display: none;">
+            <input class="button buttonCancelar button-red" type="submit" id="lang_cancelar" value="Cancelar acompanhamento!"
+                onclick="openWindow(10)">
+        </div>
+        <div id="telegram">
+            <div class="telegramButton">
+                <a href="https://t.me/smart40_bot/start=" target="_blank" id="telegramLink">
+                    <p id="lang_telegram"><i class="fa fa-telegram fa-2" aria-hidden="true"></i> Acompanhe pelo Telegram</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="version">
+    <span></span>
+</div>
+
+    <p class="warning" id="aviso"> </p>
+
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script src="js/status_idioma.js" asp-append-version="true"></script>
+
+</body>
+
+</html>

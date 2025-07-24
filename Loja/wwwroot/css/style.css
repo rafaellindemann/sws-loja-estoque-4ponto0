@@ -1,0 +1,724 @@
+﻿* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* idioma */
+div.language {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+
+.flags {
+    width: 28px;
+    cursor: pointer;
+    margin: 0px 5px 0px 5px;
+}
+
+/* Animação de transição de paginas */
+.animation {
+    animation: page_transition 1s;
+}
+
+@keyframes page_transition {
+    from {
+        opacity: 0;
+        transform: rotateX(-50deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+
+/* Tela responsiva */
+@media screen and (min-width: 1500px) {
+    div.nomeStatus {
+        font-size: 20px;
+        height: 30px;
+    }
+    #nomeStatusEsteira {
+        font-size: 20px;
+        height: 30px;
+    }
+    .containerVertical {
+        width: 10% !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.coluns {
+        width: 100%;
+    }
+    h5 {
+        overflow: auto;
+        left: 0% !important;
+    }
+    div.infoPedido {
+        width: 100%;
+    }
+    div.responsiveStatus {
+        width: 50%;
+    }
+    div.nomeStatus {
+        font-size: 15px;
+        height: 30px;
+    }
+    #nomeStatusEsteira {
+        font-size: 15px;
+        height: 30px;
+        width: 50%;
+    }
+    .imagemStatus {
+        margin: 0px !important;
+    }
+    .containerVertical {
+        width: 50% !important;
+    }
+    .company {
+        justify-content: left !important;
+    }
+    .brand {
+        justify-content: center !important;
+    }
+
+    .brand h5 {
+        display: none;
+    }
+
+    #rotacionar {
+        padding-top: 100% !important;
+    }
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    #nomeStatusEsteira {
+        width: 50%;
+    }
+}
+
+body {
+    background-image: url("../images/background/background_exxer.png");
+    background-size: cover;
+}
+
+h1,h4,label {
+    text-align: center;
+    color: ivory;
+}
+label {
+    font-family:sans-serif;
+}
+
+h3 {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(160, 160, 160);
+}
+h4 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+h5 {
+    background: -webkit-linear-gradient( rgb(171, 201, 16), rgb(56, 56, 56));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5px 5px 0px 5px !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+h6 {
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(160, 160, 160);
+}
+input {
+    margin: 0px auto;
+    display: block;
+}
+label {
+    margin: 0px auto;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Classes personalizadas*/
+.row {
+    text-align: center;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+div.header {
+    z-index: 50;
+    background: -webkit-linear-gradient( rgb(71, 71, 71), rgb(20, 17, 17));
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    padding: 5px;
+    height: 50px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #8036C5;
+}
+div.content {
+    z-index: 1;
+    margin-top: 70px;
+}
+
+div.company {
+    position: absolute;
+    left: 1%;
+    top: 20%;
+    visibility: visible;
+}
+
+.company img{
+    width: 130px;
+    height: 26px;
+}
+
+div.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+}
+
+.brand img{
+    width: 40px;
+    height: 36px;
+}
+
+div.blocos {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+div.laminas {
+    max-width: 400px;
+    margin: 20px auto;
+}
+div.coluns {
+    display: inline-block; 
+    /*width: 49%;*/
+    vertical-align:middle; 
+    margin: 4px;
+}
+div.andar {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+div.pedido {
+    text-align: center;
+}
+
+/* Aparencia da barra de rolagem*/
+::-webkit-scrollbar {
+    width: 1%;
+}
+::-webkit-scrollbar-track {
+    background: #474a51;
+}
+::-webkit-scrollbar-thumb {
+    background: #25262a;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #2e2f34;
+}
+
+/* Aparencia do menu lateral */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 60;
+    top: 0;
+    left: 0;
+    background-color: rgb(71, 71, 71);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+  }
+  
+  .sidenav a{
+    padding: 8px 8px 8px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(171, 201, 16);
+    display: block;
+    transition: 0.3s;
+    font-family:Verdana;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    font-size: 36px;
+    margin-right: 30px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  div.iconmenu{
+    font-size:28px;
+    cursor:pointer;
+    margin-left:8px; 
+    color: #ffffff;
+    height: 30px;
+    width: 20px;
+    vertical-align: middle;
+  }
+
+  /*Aparencia caixas de seleção*/
+p.warning {
+    font-size: small;
+    color: red;
+    margin: 0px;
+    margin-top: 10px !important;
+    height: 10px;
+}
+input.buttom {
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+select.blocks {
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(121, 121, 121);
+    width: 100px;
+    height: 25px;
+    border: 5px;
+    border-radius:15px; 
+    text-align-last: center;   
+    cursor: pointer;
+}
+
+select:disabled {
+    cursor: default;
+}
+
+input.blocks {
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(121, 121, 121);
+    width: 100px;
+    height: 25px;
+    border: 5px;
+    border-radius:15px; 
+    text-align-last: center;  
+    text-transform: uppercase;
+}
+select.blockmaior {
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(121, 121, 121);
+    width: 150px;
+    height: 25px;
+    border-radius:10px;
+    text-align-last: center;  
+}
+
+/* Define sobreposição das imagens */
+div.relative {
+    position: relative;
+    max-width: 640px;
+    z-index: 5;
+}
+
+div.relative1 {
+    position: relative;
+    max-width: 98%;
+    z-index: 40;
+    padding: 5px;
+    margin-left: 0%;  
+}
+
+div.absolute0 {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+    
+div.absolute1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+div.absolute2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 30;
+}
+div.absolute3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+}
+div.absolute4 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 40;
+}
+
+/* Aparência dos botões */
+.button {
+    margin-top: 15px;
+    width: 250px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(121, 121, 121);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.button:hover {
+background-color: #628d3b;
+transition: 1s;
+}
+
+.button:disabled {
+    background-color: rgb(121, 121, 121);
+    cursor: default;
+}
+
+.button-blue:hover {
+    background-color: #3952A3;
+    transition: 1s;
+}
+
+.button-red:hover {
+    background-color: #a82c2c;
+    transition: 1s;
+}
+
+.buttonCancelar {
+width: 250px !important;
+}
+
+/* Aparência do campo de texto */
+.textcamp {
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 160px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    background-color:rgb(121, 121, 121);
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+/* Aparência dos Bargraph */
+.containerHorizontal {
+  width: 90%;
+  background-color: #808080;
+  margin-left: 5%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+div.conteinerVerticaisStatus {
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+}
+
+.containerVertical {
+    display: inline-block; 
+    width: 10%;
+    margin: 4% 4% 2% 4%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #808080;
+}
+
+.pronto {
+    background-color: #4CAF50;
+}
+
+.andamento {
+    background-color: #dbd334;
+}
+
+.aguardando {
+    background-color: #da2020;
+}
+
+.barraProgresso
+{
+    background-color:  #808080; 
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.passo1 {
+    background-color: #4CAF50; 
+    width: 12.5%;
+}
+
+.passo2 {
+    background-color: #4CAF50;
+    width: 25%;
+}
+
+.passo3 {
+    background-color: #4CAF50;
+    width: 37.5%;
+}
+
+.passo4 {
+    background-color: #4CAF50;
+    width: 50%;
+}
+
+.passo5 {
+    background-color: #4CAF50;
+    width: 62.5%;
+}
+
+.passo6 {
+    background-color: #4CAF50;
+    width: 75%;
+}
+
+.passo7 {
+    background-color: #4CAF50;
+    width: 87.5%;
+}
+
+.finalizado {
+    background-color: #4CAF50;
+    width: 100%;
+}
+
+.falha {
+    background-color: #FF2020ED;
+    color: white;
+}
+
+#num-posicao {
+    background-color: rgb(121, 121, 121);
+    cursor: default;
+}
+.nomeStatus {
+    font-size: 1.3vw;
+    background-color: #4CAF50;
+    height: 2.8vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 5px;
+    font-weight: bold;
+    color: #515151!important;
+}
+
+#nomeStatusEsteira {
+    /* font-size: 1.3vw; */
+    background-color: rgb(121, 121, 121);
+    width:65%;
+    margin: auto;
+    margin-bottom: 4vw;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    color: #69e896 !important;
+}
+
+#rotacionar {
+    justify-content: center;
+}
+
+.tempoProducao {
+    font-size: 30px;
+    color: rgb(171, 201, 16);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main_label {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.revisar_pedido {
+    width: 100%;
+    margin: 4px;
+}
+
+.padrao_texto{
+    display: none;
+}
+
+#divOp {
+    margin-top: 35px;
+}
+
+#containerTime {
+    color: rgb(171, 201, 16);
+    width: 90%;
+    margin-left: 5%;
+    font-size: 1.5em;
+}
+
+#startTime {
+    display: inline-block;
+    width: 46%;
+    padding-left: 2%;
+    text-align: start;
+}
+#plannedFinishTime{
+    display: inline-block;
+    width: 50%;
+    text-align: end;
+}
+
+/* estilização do botão do telegram */
+#telegram {
+    margin-top: 30px;
+}
+#telegramLink {
+    text-decoration: none;
+}
+.telegramButton p{
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 11px;
+}
+.telegramButton{
+    background-color: #1682FB;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    margin: auto;
+    transition: 1s;
+}
+.telegramButton:hover{
+    background-color: #03057f;
+    transition: 1s;
+}
+
+.version {
+    color: rgb(160, 160, 160);
+    position: absolute;
+    top: 55px;
+    right: 10px;
+}
+
+/*----------------------------------------- TagoIO ------------------------------------------------*/
+
+#logo_TagoIO {
+    width: 300px;
+    padding: 50px 30px 10px 30px;
+}
+.card-image {
+    display: block;
+    min-height: 20rem;
+    background: #fff center center no-repeat;
+    background-size: cover;
+    background-color: transparent !important;
+
+  }
+  
+  .card-image>img {
+    display: block;
+    width: 100%;
+    opacity: 0;
+  }
+  
+  .card-list {
+    display: block;
+    margin: 1rem auto;
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    list-style: none;
+  }
+  
+  .card {
+    display: inline-block !important;
+    width: 90%;
+    max-width: 25rem;
+    margin: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    background-color: transparent !important;
+    border: solid !important; 
+    border-color: rgb(171, 201, 16) !important;
+    border-radius: 50px !important; 
+    border-width: 4px !important;
+  }
+  
+  .card:hover {
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-description {
+    display: block;
+    padding: 1em 0.5em;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .card-description:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .card-description>h2 {
+    margin: 0 0 0.5em;
+  }
+  
+  .card-description>p {
+    margin: 0;
+  }
+
+  #redirectProdutividade {
+    background-image: url("../images/produtividade.png");
+    background-size: contain; 
+    margin: 10px
+  }
+
+  #redirectConsumo {
+    background-image: url("../images/consumo.png");
+    background-size: contain; 
+    margin: 10px
+  }
+
+/*----------------------------------------- TagoIO ------------------------------------------------*/
