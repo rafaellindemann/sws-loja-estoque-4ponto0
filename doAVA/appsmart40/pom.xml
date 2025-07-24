@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.smart40</groupId>
+    <artifactId>appsmart40</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+        	<groupId>io.moquette</groupId>
+        	<artifactId>moquette-broker</artifactId>
+        	<version>0.15</version>
+    	</dependency>
+   	 	<dependency>
+        	<groupId>org.eclipse.paho</groupId>
+        	<artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+        	<version>1.2.5</version>
+    	</dependency>
+		<dependency>
+    		<groupId>com.github.s7connector</groupId>
+    		<artifactId>s7connector</artifactId>
+    		<version>2.1</version> <!-- Verifique a versão mais recente -->
+		</dependency>
+    </dependencies>
+
+</project>
